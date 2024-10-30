@@ -207,7 +207,7 @@ const footerNavigation = {
   ],
 }
 
-export function Footer({className, ...props}: React.ComponentPropsWithRef<"footer">) {
+function Footer({className, ...props}: React.ComponentPropsWithRef<"footer">) {
   return (
     <footer {...props} className={clsx("bg-white", className)}>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
@@ -414,7 +414,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        <Footer />
+
+          <Footer />
         </main>
       </div>
     </>
