@@ -353,8 +353,8 @@ export default function Home() {
         {/* Static sidebar for desktop */}
         <div
             className={clsx(
-              "hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col",
-              sidebarCollapsed && "lg:w-16"
+              "hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:flex-col",
+              sidebarCollapsed ? "lg:w-16" : "lg:w-72"
             )}
         >
           {/* Sidebar component, swap this element with another sidebar if you like */}
@@ -383,8 +383,8 @@ export default function Home() {
 
         <main
           className={clsx(
-            "py-10 lg:pl-72",
-            sidebarCollapsed && "lg:pl-16"
+            "py-10",
+            sidebarCollapsed ? "lg:pl-16" : "lg:pl-72"
           )}
         >
           <div className="px-4 sm:px-6 lg:px-8 h-100">
